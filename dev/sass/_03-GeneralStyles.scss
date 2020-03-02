@@ -1,0 +1,46 @@
+html {
+    @include box-model(border-box);
+    height: 100%;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    @include box-model(inherit);
+}
+
+body {
+    font-family: $fuentePrimaria;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+.pagina {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina.no-menu {
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
+
+.contenido-principal {
+    flex: 1;
+    /* QUE ABARQUE TODO EL ANCHO DISPONIBLE TANTO ARRIBA COMO ABAJO */
+}

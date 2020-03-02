@@ -1,0 +1,32 @@
+/* BOX-MODEL */
+
+@mixin box-model($border_box) {
+    box-sizing: $border_box;
+}
+
+
+/* MEDIA QUERYS */
+
+@mixin iphone {
+    @media only screen and (min-width: #{$iphone}) {
+        @content;
+    }
+}
+
+@mixin telefono {
+    @media only screen and (min-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}

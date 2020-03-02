@@ -1,0 +1,24 @@
+PROYECTO ADMIN FLEXBOX:
+Para que me funcione el alto
+del 100% de todo el layout se 
+debe hacer lo siguiente:
+
+html {
+  height: 100%
+}
+
+body {
+  height: 100%
+}
+
+.pagina {
+  min-height: 100%
+}
+
+Primero le damos la altura del 100%
+a todo el html, posteriormente a todo
+el body y por ultimo definimos
+una altura minima del 100% a todo el
+contenedor del proyecto, es decir, al
+elemento padre que va a contener a los
+demas.
