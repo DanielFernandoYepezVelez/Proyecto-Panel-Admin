@@ -46,7 +46,13 @@
         .caja {
             display: flex;
             align-items: center;
-            padding: 0 1rem;
+            padding: 0 1.23rem;
+            font-size: 16px;
+            @include tablet {
+                display: flex;
+                align-items: center;
+                padding: 0 1rem;
+            }
             &:hover {
                 background-color: $colorSecundario;
             }
@@ -55,13 +61,16 @@
                 text-decoration: none;
                 span {
                     background-color: $colorTerciario;
-                    padding: 0.5rem;
-                    margin-left: 0.5rem;
+                    padding: .1rem;
                     border-radius: 50%;
                     -webkit-border-radius: 50%;
                     -moz-border-radius: 50%;
                     -ms-border-radius: 50%;
                     -o-border-radius: 50%;
+                    @include tablet {
+                        padding: 0.5rem;
+                        margin-left: 0.5rem;
+                    }
                 }
             }
         }
