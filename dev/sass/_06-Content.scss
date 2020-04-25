@@ -1,77 +1,24 @@
-.contenido {
+.form {
+    grid-area: contenido;
+    padding: 2rem 0 0 2rem;
     background-color: $colorGrisClaro;
-    flex: 1;
-    padding: 2rem;
-}
-
-.formulario {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 1rem;
-    .campo {
-        flex: 0 0 100%;
-        display: flex;
-        margin-bottom: 1rem;
-        align-items: center;
-        @include tablet {
-            flex: 0 0 calc(50% - 1rem);
-        }
-        &.expandir {
-            flex: 0 0 calc(100%);
-            align-items: flex-start;
-            label {
-                flex: 0 0 12.2%;
-                @include telefono {
-                    margin-right: .2rem;
-                }
+    .formulario {
+        margin-top: 1rem;
+        .campo {
+            margin-bottom: .5rem;
+            input[type="text"] {
+                height: 1.8rem;
             }
-            textarea {
-                flex: 1;
-            }
+            // .opciones {
+            //     display: flex;
+            // }
         }
-        label {
-            flex: 0 0 25%;
+        .boton {
+            margin-top: .5rem;
+            padding: .3rem;
+            border-radius: 5px;
+            color: $colorBlanco;
+            background-color: $colorPrimario;
         }
-        input[type="text"] {
-            flex: 0 0 75%;
-            height: 2rem;
-        }
-        .opciones {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-left: 1rem;
-            @include tablet {
-                flex-direction: row;
-                margin-left: 0;
-            }
-        }
-    }
-}
-
-.select-wrapper {
-    display: flex;
-    align-items: center;
-    margin: 0 5% .2rem 0;
-    @include telefono {
-        margin-right: 2%;
-    }
-    label {
-        margin-left: 5%;
-        @include telefono {
-            margin-left: 2%;
-        }
-    }
-}
-
-.enviar {
-    display: flex;
-    justify-content: flex-end;
-    .boton {
-        padding: 1rem;
-        color: $colorBlanco;
-        background-color: $colorPrimario;
-        font-weight: 600;
     }
 }

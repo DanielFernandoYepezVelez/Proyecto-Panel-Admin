@@ -1,78 +1,86 @@
 .header {
-    display: flex;
-    .nombre-sitio {
-        flex: 0 0 5rem;
-        text-align: center;
+    grid-area: header;
+    @include flexTres(flex, center, space-between);
+    color: $colorBlanco;
+    background-color: $colorPrimario;
+    .header__title {
+        height: 4rem;
+        @include flexDos(flex, center);
         background-color: $colorSecundario;
-        @include desktop {
-            flex: 0 0 20rem;
-        }
-        h1 {
-            color: $colorBlanco;
-        }
-        .escritorio {
-            display: none;
-            @include desktop {
-                display: block;
+        padding: 0 0.2rem;
+        position: relative;
+    }
+    .header__flechas {
+        cursor: pointer;
+        position: absolute;
+        left: 3rem;
+    }
+    .header__menu {
+        @include flexUno(flex);
+        .header__list {
+            list-style: none;
+            margin-right: 0.5rem;
+            &:last-child {
+                margin-right: 0;
+                padding: 0 0.2rem;
             }
-        }
-        .movil {
-            @include desktop {
-                display: none;
+            .header__item {
+                text-decoration: none;
+                color: $colorBlanco;
             }
         }
     }
 }
 
-.barra {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    background-color: $colorPrimario;
-    .menu-izquierdo {
-        display: flex;
-        align-items: center;
-        padding-left: 1rem;
-        i {
-            color: $colorBlanco;
-            font-size: 1.2rem;
-        }
-        .fa-arrow-right {
-            display: none;
-        }
-    }
-    .menu-derecho {
-        display: flex;
-        .caja {
-            display: flex;
-            align-items: center;
-            padding: 0 1.23rem;
-            font-size: 16px;
-            @include tablet {
-                display: flex;
-                align-items: center;
-                padding: 0 1rem;
-            }
-            &:hover {
-                background-color: $colorSecundario;
-            }
-            a {
-                color: $colorBlanco;
-                text-decoration: none;
-                span {
-                    background-color: $colorTerciario;
-                    padding: .1rem;
-                    border-radius: 50%;
-                    -webkit-border-radius: 50%;
-                    -moz-border-radius: 50%;
-                    -ms-border-radius: 50%;
-                    -o-border-radius: 50%;
-                    @include tablet {
-                        padding: 0.5rem;
-                        margin-left: 0.5rem;
-                    }
-                }
-            }
-        }
-    }
-}
+// .barra {
+//     display: flex;
+//     justify-content: space-between;
+//     flex: 1;
+//     background-color: $colorPrimario;
+//     .menu-izquierdo {
+//         display: flex;
+//         align-items: center;
+//         padding-left: 1rem;
+//         i {
+//             color: $colorBlanco;
+//             font-size: 1.2rem;
+//         }
+//         .fa-arrow-right {
+//             display: none;
+//         }
+//     }
+//     .menu-derecho {
+//         display: flex;
+//         .caja {
+//             display: flex;
+//             align-items: center;
+//             padding: 0 1.23rem;
+//             font-size: 16px;
+//             @include tablet {
+//                 display: flex;
+//                 align-items: center;
+//                 padding: 0 1rem;
+//             }
+//             &:hover {
+//                 background-color: $colorSecundario;
+//             }
+//             a {
+//                 color: $colorBlanco;
+//                 text-decoration: none;
+//                 span {
+//                     background-color: $colorTerciario;
+//                     padding: 0.1rem;
+//                     border-radius: 50%;
+//                     -webkit-border-radius: 50%;
+//                     -moz-border-radius: 50%;
+//                     -ms-border-radius: 50%;
+//                     -o-border-radius: 50%;
+//                     @include tablet {
+//                         padding: 0.5rem;
+//                         margin-left: 0.5rem;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -5,6 +5,24 @@
 }
 
 
+/* DISPLAY FLEX */
+
+@mixin flexUno($flex) {
+    display: $flex;
+}
+
+@mixin flexDos($flex, $items) {
+    display: $flex;
+    align-items: $items;
+}
+
+@mixin flexTres($flex, $items, $content) {
+    display: $flex;
+    align-items: $items;
+    justify-content: $content;
+}
+
+
 /* MEDIA QUERYS */
 
 @mixin iphone {

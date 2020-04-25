@@ -8,7 +8,7 @@
     <meta name="description" content="This is a static page with FLEXBOX, GULP, SASS" />
     <meta name="keywords" content="HTML5, CSS3, FLEXBOX, SASS, GULP" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Admin FlexBox</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="./css/app.css" />
@@ -16,42 +16,38 @@
 </head>
 
 <body>
-    <div class="pagina">
-        <header class="header menu-abierto">
-            <div class="nombre-sitio">
-                <h1 class="escritorio">AdminFlex</h1>
+    <div class="main-container">
+        <header class="header">
+            <div class="header__title">
+                <!-- <h1 class="escritorio">AdminFlex</h1> -->
                 <h1 class="movil">AF</h1>
             </div>
-            <div class="barra">
-                <div class="menu-izquierdo">
-                    <i class="fas fa-arrow-left"></i>
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                <div class="menu-derecho">
-                    <div class="caja mensaje">
-                        <a href="#">
-                            <i class="fas fa-comment-alt"></i> Mensajes
-                            <span>20</span>
-                        </a>
-                    </div>
-                    <div class="caja alertas ">
-                        <a href="#">
-                            <i class="fas fa-bell"></i> Alertas
-                            <span>10</span>
-                        </a>
-                    </div>
-                    <div class="caja cerar">
-                        <a href="#">
-                Cerrar Sesion
-              </a>
-                    </div>
-                </div>
+            <div class="header__flechas">
+                <i class="left fas fa-arrow-left"></i>
+                <i class="right fas fa-arrow-right"></i>
             </div>
+            <nav>
+                <ul class="header__menu">
+                    <li class="header__list">
+                        <a class="header__item" href="#">
+                            <i class="fab fa-facebook-messenger"></i> Mensajes
+                        </a>
+                    </li>
+                    <li class="header__list">
+                        <a class="header__item" href="#">
+                            <i class="far fa-paper-plane"></i>Alertas</a>
+                    </li>
+                    <li class="header__list">
+                        <a class="header__item" href="#">
+                            <i class="fas fa-times-circle"></i>Salir</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
-        <main class="contenido-principal">
-            <aside class="sidebar">
-                <div class="usuario">
+        <main>
+            <aside id="lateral" class="lateral">
+                <div>
                     <figure>
                         <img src="./assets/img/usuario.svg" alt="imagen-usuario" />
                     </figure>
@@ -61,7 +57,7 @@
                     <input type="text" placeholder="Buscar..." name="#" id="#" />
                 </div>
                 <div class="menu-admin">
-                    <h2>Menú De Administración</h2>
+                    <h2 class="lateral__title">Menú De Administración:</h2>
                     <ul class="menu">
                         <li>
                             <a href="#"> <i class="fas fa-address-book"></i> Clientes </a>
@@ -126,63 +122,65 @@
                     </ul>
                 </div>
             </aside>
+        </main>
 
-            <div class="contenido">
-                <h2 class="encabezado">Administración De Clientes</h2>
-
-                <form action="#" class="formulario">
-                    <div class="campo">
-                        <label for="nombre">Nombre Cliente</label>
-                        <input type="text" name="nombre" id="nombre" />
-                    </div>
-                    <div class="campo">
-                        <label for="nombre">Apellido Cliente</label>
-                        <input type="text" name="nombre" id="nombre" />
-                    </div>
-                    <div class="campo">
-                        <label for="nombre">Empresa</label>
-                        <input type="text" name="nombre" id="nombre" />
-                    </div>
-                    <div class="campo">
-                        <label for="nombre">Dirección</label>
-                        <input type="text" name="nombre" id="nombre" />
-                    </div>
-                    <div class="campo expandir">
-                        <label for="nombre">Otra Información</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-
-                    <div class="campo expandir">
-                        <label>Membresia:</label>
-                        <div class="opciones finales">
-                            <div class="select-wrapper">
-                                <input type="radio" value="normal" name="contact" id="normal" />
-                                <label for="normal">Normal</label>
-                            </div>
-                            <div class="select-wrapper">
-                                <input type="radio" value="basico" name="contact" id="basico" />
-                                <label for="basico">Básico</label>
-                            </div>
-                            <div class="select-wrapper">
-                                <input type="radio" value="premium" name="contact" id="premium" />
-                                <label for="premium">Premium</label>
-                            </div>
-                            <div class="select-wrapper">
-                                <input type="radio" value="gold" name="contact" id="gold" />
-                                <label for="gold">Gold</label>
-                            </div>
+        <section class="form">
+            <h2 class="encabezado">Administración De Clientes</h2>
+            <form action="#" class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" />
+                </div>
+                <div class="campo">
+                    <label for="nombre">Apellido</label>
+                    <input type="text" name="nombre" id="nombre" />
+                </div>
+                <div class="campo">
+                    <label for="nombre">Empresa</label>
+                    <input type="text" name="nombre" id="nombre" />
+                </div>
+                <div class="campo">
+                    <label for="nombre">Dirección</label>
+                    <input type="text" name="nombre" id="nombre" />
+                </div>
+                <div>
+                    <label for="nombre">Otra Información</label>
+                </div>
+                <div class="campo">
+                    <textarea name="" id="" cols="35" rows="10"></textarea>
+                </div>
+                <div class="membresia">
+                    <label>Membresia:</label>
+                    <div class="opciones finales">
+                        <div class="select-wrapper">
+                            <input type="radio" value="normal" name="contact" id="normal" />
+                            <label for="normal">Normal</label>
+                        </div>
+                        <div class="select-wrapper">
+                            <input type="radio" value="basico" name="contact" id="basico" />
+                            <label for="basico">Básico</label>
+                        </div>
+                        <div class="select-wrapper">
+                            <input type="radio" value="premium" name="contact" id="premium" />
+                            <label for="premium">Premium</label>
+                        </div>
+                        <div class="select-wrapper">
+                            <input type="radio" value="gold" name="contact" id="gold" />
+                            <label for="gold">Gold</label>
                         </div>
                     </div>
+                </div>
+                <div class="enviar">
+                    <input type="submit" value="Enviar" class="boton" />
+                </div>
+            </form>
+        </section>
 
-                    <div class="campo enviar expandir">
-                        <input type="submit" value="Enviar" class="boton" />
-                    </div>
-                </form>
-            </div>
-        </main>
-    </div>
+        <footer class="footer">
+            <p>&copy; Daniel Fernando Yepez Velez</p>
+        </footer>
 
-    <script src="./js/app.js"></script>
+        <script src="./js/app.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 html {
     @include box-model(border-box);
-    height: 100%;
 }
 
 *,
@@ -13,34 +12,15 @@ html {
 
 body {
     font-family: $fuentePrimaria;
-    height: 100%;
 }
 
 img {
     max-width: 100%;
 }
 
-.centrado {
-    text-align: center;
-}
-
-.oculto {
-    display: none;
-}
-
-.pagina {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.pagina.no-menu {
-    .sidebar {
-        margin-left: -20rem;
-    }
-}
-
-.contenido-principal {
-    flex: 1;
-    /* QUE ABARQUE TODO EL ANCHO DISPONIBLE TANTO ARRIBA COMO ABAJO */
+.main-container {
+    display: grid;
+    grid-template-columns: 15.5rem auto;
+    grid-template-rows: 4rem auto 2rem;
+    grid-template-areas: "header header" "lateral contenido" "footer footer";
 }

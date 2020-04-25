@@ -1,28 +1,14 @@
-const menuIzquierdo = document.querySelector('.menu-izquierdo');
-const menuAbierto = document.querySelector('.menu-abierto');
-const menuDerecho = document.querySelector('.menu-derecho');
+const barra = document.getElementById('lateral');
 
-menuIzquierdo.addEventListener('click', (e) => {
-    const claseMenu = e.target.classList;
+const ocultarMenu = (e) => {
+    e.preventDefault();
 
-    /* Variables Que Selecciones Las Flechas y la pagina */
-    const contenedor = document.querySelector('.pagina'),
-        flechaIzquierda = document.querySelector('.fa-arrow-left'),
-        flechaDerecha = document.querySelector('.fa-arrow-right');
-
-    if (claseMenu.contains('fa-arrow-left')) {
-        // Cerrar el menu Lateral
-        flechaIzquierda.style.display = 'none';
-        flechaDerecha.style.display = 'block';
-        contenedor.classList.add('no-menu');
-        menuAbierto.style.width = 'auto';
-        menuDerecho.style.display = 'flex';
-
-    } else if (claseMenu.contains('fa-arrow-right')) {
-        flechaIzquierda.style.display = 'block';
-        flechaDerecha.style.display = 'none';
-        contenedor.classList.remove('no-menu');
-        menuAbierto.style.width = '195%';
-        menuDerecho.style.display = 'none';
+    if (e.target.classList.contains('left')) {
+        barra.classList.toggle('lateral-menu');
+        console.log('flecha izquierda');
+    } else if (e.target.classList.contains('right')) {
+        console.log('flecha derecha');
     }
-})
+}
+
+document.addEventListener('click', ocultarMenu);
