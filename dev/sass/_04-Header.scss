@@ -9,78 +9,57 @@
         background-color: $colorSecundario;
         padding: 0 0.2rem;
         position: relative;
+        .header__desktop {
+            display: none;
+        }
+        @include telefono {
+            .header__phone {
+                display: none;
+            }
+            .header__desktop {
+                display: block;
+            }
+        }
     }
     .header__flechas {
         cursor: pointer;
         position: absolute;
-        left: 3rem;
+        left: 3.5rem;
+        .right {
+            display: none;
+        }
+        @include telefono {
+            left: 11rem;
+        }
     }
-    .header__menu {
-        @include flexUno(flex);
-        .header__list {
-            list-style: none;
-            margin-right: 0.5rem;
-            &:last-child {
-                margin-right: 0;
-                padding: 0 0.2rem;
-            }
-            .header__item {
-                text-decoration: none;
-                color: $colorBlanco;
+    #nav {
+        display: none;
+        .header__menu {
+            @include flexUno(flex);
+            .header__list {
+                list-style: none;
+                margin-right: 0.5rem;
+                &:last-child {
+                    margin-right: 0;
+                    padding: 0 0.2rem;
+                }
+                .header__item {
+                    text-decoration: none;
+                    color: $colorBlanco;
+                    .header__push {
+                        display: none;
+                    }
+                    @include tablet {
+                        .header__push {
+                            display: inline;
+                            padding: .2rem;
+                            background-color: green;
+                            border-radius: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
             }
         }
     }
 }
-
-// .barra {
-//     display: flex;
-//     justify-content: space-between;
-//     flex: 1;
-//     background-color: $colorPrimario;
-//     .menu-izquierdo {
-//         display: flex;
-//         align-items: center;
-//         padding-left: 1rem;
-//         i {
-//             color: $colorBlanco;
-//             font-size: 1.2rem;
-//         }
-//         .fa-arrow-right {
-//             display: none;
-//         }
-//     }
-//     .menu-derecho {
-//         display: flex;
-//         .caja {
-//             display: flex;
-//             align-items: center;
-//             padding: 0 1.23rem;
-//             font-size: 16px;
-//             @include tablet {
-//                 display: flex;
-//                 align-items: center;
-//                 padding: 0 1rem;
-//             }
-//             &:hover {
-//                 background-color: $colorSecundario;
-//             }
-//             a {
-//                 color: $colorBlanco;
-//                 text-decoration: none;
-//                 span {
-//                     background-color: $colorTerciario;
-//                     padding: 0.1rem;
-//                     border-radius: 50%;
-//                     -webkit-border-radius: 50%;
-//                     -moz-border-radius: 50%;
-//                     -ms-border-radius: 50%;
-//                     -o-border-radius: 50%;
-//                     @include tablet {
-//                         padding: 0.5rem;
-//                         margin-left: 0.5rem;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }

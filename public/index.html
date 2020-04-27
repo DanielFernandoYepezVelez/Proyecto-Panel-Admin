@@ -16,26 +16,29 @@
 </head>
 
 <body>
-    <div class="main-container">
+    <div id="app" class="main-container">
         <header class="header">
             <div class="header__title">
-                <!-- <h1 class="escritorio">AdminFlex</h1> -->
-                <h1 class="movil">AF</h1>
+                <h1 class="header__desktop">AdminFlex</h1>
+                <h1 class="header__phone">AF</h1>
             </div>
             <div class="header__flechas">
                 <i class="left fas fa-arrow-left"></i>
                 <i class="right fas fa-arrow-right"></i>
             </div>
-            <nav>
+            <nav id="nav">
                 <ul class="header__menu">
                     <li class="header__list">
                         <a class="header__item" href="#">
                             <i class="fab fa-facebook-messenger"></i> Mensajes
+                            <span class="header__push">5</span>
                         </a>
                     </li>
                     <li class="header__list">
                         <a class="header__item" href="#">
-                            <i class="far fa-paper-plane"></i>Alertas</a>
+                            <i class="far fa-paper-plane"></i>Alertas
+                            <span class="header__push">5</span>
+                        </a>
                     </li>
                     <li class="header__list">
                         <a class="header__item" href="#">
@@ -124,7 +127,7 @@
             </aside>
         </main>
 
-        <section class="form">
+        <section id="form" class="form">
             <h2 class="encabezado">Administración De Clientes</h2>
             <form action="#" class="formulario">
                 <div class="campo">

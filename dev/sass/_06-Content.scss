@@ -1,7 +1,26 @@
 .form {
     grid-area: contenido;
+    /* transition: all 3s;
+    -webkit-transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+    -o-transition: all 3s; */
     padding: 2rem 0 0 2rem;
     background-color: $colorGrisClaro;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include telefono {
+        text-align: center;
+        .opciones {
+            display: flex;
+            justify-content: center;
+            input[type="radio"] {
+                margin-left: 5px;
+            }
+        }
+    }
     .formulario {
         margin-top: 1rem;
         .campo {
@@ -9,9 +28,6 @@
             input[type="text"] {
                 height: 1.8rem;
             }
-            // .opciones {
-            //     display: flex;
-            // }
         }
         .boton {
             margin-top: .5rem;
@@ -21,4 +37,8 @@
             background-color: $colorPrimario;
         }
     }
+}
+
+.new-form {
+    padding: .5rem 0 0 .5rem;
 }
