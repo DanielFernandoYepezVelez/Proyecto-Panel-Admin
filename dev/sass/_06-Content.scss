@@ -1,18 +1,13 @@
 .form {
     grid-area: contenido;
-    /* transition: all 3s;
-    -webkit-transition: all 3s;
-    -moz-transition: all 3s;
-    -ms-transition: all 3s;
-    -o-transition: all 3s; */
     padding: 2rem 0 0 2rem;
     background-color: $colorGrisClaro;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-height: 100%;
     @include telefono {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .opciones {
             display: flex;
             justify-content: center;
@@ -35,6 +30,9 @@
             border-radius: 5px;
             color: $colorBlanco;
             background-color: $colorPrimario;
+            @include telefono {
+                margin-bottom: .5rem;
+            }
         }
     }
 }

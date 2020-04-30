@@ -8,6 +8,7 @@ const ocultarMenu = (e) => {
 
     if (e.target.classList.contains('left')) {
         app.classList.toggle('main-container-two');
+        app.classList.remove('main-container');
         form.classList.toggle('new-form');
         barra.classList.toggle('lateral-visible');
 
@@ -17,6 +18,7 @@ const ocultarMenu = (e) => {
 
     } else if (e.target.classList.contains('right')) {
         app.classList.toggle('main-container-two');
+        app.classList.add('main-container');
         form.classList.toggle('new-form');
         barra.classList.toggle('lateral-visible');
 

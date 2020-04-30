@@ -19,21 +19,29 @@ img {
 }
 
 .main-container {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 15.5rem auto;
-    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 16rem auto;
+    grid-template-rows: 4rem 53rem 2.4rem;
     grid-template-areas: "header header" "lateral contenido" "footer footer";
+    transition: all .5s ease;
+    @include telefono {
+        grid-template-rows: 4rem auto 2.4rem;
+    }
 }
 
 .main-container-two {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 34rem 2.4rem;
     grid-template-areas: "header header" "contenido contenido" "footer footer";
-    transition: all 3s;
-    -webkit-transition: all 3s;
-    -moz-transition: all 3s;
-    -ms-transition: all 3s;
-    -o-transition: all 3s;
-    // transition: all 3s ease;
+    transition: all .5s ease;
+    @include telefono {
+        grid-template-rows: 4rem auto 2.4rem;
+    }
 }
